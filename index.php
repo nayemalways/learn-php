@@ -134,7 +134,7 @@ $myCar = new Car("Blue", "B305");
 // echo $myCar->color;
 
 
-# PHP String Functions
+# -----------------------------PHP String Functions--------------------------------------
 $school = 'A Rob School and College';
 
 # Check String length strlen().
@@ -155,4 +155,63 @@ $school = 'A Rob School and College';
 // var_dump(str_contains($school, 'andd')); // False
 
 # Search specific text within a  string.
-echo strpos($school, 'and');
+// echo strpos($school, 'and');
+// echo strpos($school, 'College');
+
+# String Starts with
+// var_dump(str_starts_with($school, 'A Rob')); 
+
+# String Ends with
+//  var_dump(str_ends_with($school, 'College')); // true
+
+# String to Uppercase
+// echo strtoupper($school);
+// echo strtolower($school);
+// echo strtoupper($school);
+// echo strtolower($school);
+
+# Replace a substring of a String
+$college = 'Bhola Govt College';
+// echo str_replace('Bhola', 'Noakhali', $college);
+// echo str_replace('College', 'School', $college);
+
+# Trim
+// echo trim('       Mahin Mohammad');
+// echo trim('   Bhola Govt School       ');
+
+
+# String to Array
+$r = explode(" ", $college);
+// print_r($r);
+
+// echo substr($college, 6, 4); // Govt
+// echo substr($college, 11, 7); // College
+
+# Slice by substr
+// echo substr($college, 6); // Govt College
+// var_dump(is_int(58.23));
+// var_dump(is_float(58.23));
+// var_dump(is_infinite(1.9e411));
+// var_dump(is_nan('525'));
+// var_dump(is_numeric('525'));
+// var_dump(intval('452'));
+
+// var_dump((int) "km 25 km");
+
+
+# PHP Math
+// echo(pi());
+// echo min(2, 4, 5, -20);
+// echo max(2, 4, 5, -20);
+// echo abs(-45);
+// echo sqrt(69);
+// echo round(8.6);
+// echo round(8.4);
+// echo rand(1, 10);
+
+
+class Carr {
+    public static $wheels = 4;
+}
+
+echo Carr::$wheels;
