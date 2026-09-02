@@ -10,14 +10,14 @@
 */
 
 # PHP Variables
- $name = 'Nayem Ahmed';
- $age = 23;
- $profession = 'Software Developer';
+$name = 'Nayem Ahmed';
+$age = 23;
+$profession = 'Software Developer';
 
 //  echo $name . 'and age is ' . $age, ' and my profession is ' . $profession;
- #Note: To concatenate a string in PHP, add . sign. In Javascript we use + to concatenate a string.
+#Note: To concatenate a string in PHP, add . sign. In Javascript we use + to concatenate a string.
 
- # Variable Interpolation
+# Variable Interpolation
 //  echo "My name is $name. I am $age years old. I am a professional $profession";
 
 # Check Variables Type
@@ -28,24 +28,27 @@
 
 # PHP Variables Scope
 # Global Scope and Function Scope
-function myTest() {
+function myTest()
+{
     global $name; // To access global variable, assign the var by global flag. Otherwise the global var can't be accessible from function scope.
     echo "My name is $name";
 
     $weather = 'Today is a Sunny Day'; // Local Scope: A local scope variables belongs inside a function. This variable not accessible from global scope.
     echo $weather;
-    
+
 }
 
 // myTest();
 
 
 # Variables Static Scope
-function testStatic() {
+function testStatic()
+{
     static $x = 0;
     echo $x;
     $x++;
-};
+}
+;
 
 // testStatic();
 // testStatic();
@@ -54,17 +57,21 @@ function testStatic() {
 # Super Global $GLOBAL
 $x = 10;
 $y = 5;
-function testGlobalOne() {
+function testGlobalOne()
+{
     $GLOBALS['y'] = $GLOBALS['x'] + $GLOBALS['y'];
-};
+}
+;
 
 // testGlobalOne();
 // echo $y;
 
-function testGlobalTwo() {
+function testGlobalTwo()
+{
     global $x, $y;
     $x = $x + $y;
-};
+}
+;
 
 // testGlobalTwo();
 // echo $x; 
@@ -95,14 +102,15 @@ $d = true;
 # array
 $e = ['Hello', 34,];
 # object
-class User {
+class User
+{
     public $name;
     public $age;
 }
 
 $user = new User();
-$user-> name = 'Nayem';
-$user-> age = 23;
+$user->name = 'Nayem';
+$user->age = 23;
 
 // echo $user->name;
 
@@ -115,16 +123,19 @@ $user-> age = 23;
 // }
 
 // PHP Object Data Type
-class Car {
+class Car
+{
     public $color;
     public $model;
 
-    public function __construct($color, $model) {
+    public function __construct($color, $model)
+    {
         $this->color = $color;
         $this->model = $model;
     }
 
-    function carDetails() {
+    function carDetails()
+    {
         return "My car is a $this->color and model is $this->model";
     }
 }
@@ -209,9 +220,126 @@ $r = explode(" ", $college);
 // echo round(8.4);
 // echo rand(1, 10);
 
-
-class Carr {
+# PHP Class Object with Static
+class Carr
+{
     public static $wheels = 4;
 }
 
-echo Carr::$wheels;
+// echo Carr::$wheels;
+
+
+# PHP Loops
+
+// $age = 0;
+
+// while ($age <= 15 ) {
+//     echo "$age, ";
+//     $age++;
+// }
+
+
+
+// for ($i = 0; $i <= 10; $i ++) {
+//     echo "$i, ";
+// }
+
+// $i = 10;
+
+// do {
+//     echo "$i, ";
+//     $i++;
+// } while ($i < 20);
+
+
+// $i = 1;
+
+// while ($i <=10) {
+//     echo "$i, ";
+//     $i++;
+// }
+
+
+// for ($i = 10; $i >= 1; $i--) {
+//     echo "$i, ";
+// }
+
+// for ($i = 1; $i <= 20; $i++) {
+//     $r = $i / 2;
+//     if (is_float($r)) {
+//         continue;
+//     };
+
+//     echo "$i, ";
+// }
+
+// for ($i = 1; $i <= 20; $i++) {
+//     $r = $i / 2;
+//     if (!is_float($r)) {
+//         continue;
+//     };
+
+//     echo "$i, ";
+// }
+
+
+// $sum = 0;
+// $i = 1;
+
+// while ($i <= 100) {
+//     $sum += $i;
+//     $i++;
+// }
+
+// echo $sum;
+
+
+// for ($i = 0; $i <=30; $i = $i + 5) {
+//     if ($i === 0) {
+//         continue;
+//     }
+//     echo "$i, ";
+// }
+
+// $numbers = [10, 20, 30, 40, 50];
+// foreach ($numbers as $number) {
+//     echo "$number, ";
+// }
+
+
+// $numbers = [10, 25, 30, 45, 50, 75];
+// foreach ($numbers as $number) {
+//     if ($number >= 50) {
+//         echo "$number ";
+//     }
+// }
+
+// $numbers = [10, 5, 20, 8, 30];
+// $result = 0;
+// foreach ($numbers as $number) {
+//     if ($number > $result) {
+//         $result = $number;
+//     }
+// }
+
+// echo $result;
+
+// $num = 7;
+// for ($i = 1; $i <=10; $i++) {
+//     $mul = $i * $num;
+//     echo "$num * $i = $mul, ";
+// }
+ 
+
+// for ($i = 1; $i <= 100; $i++) {
+//     if (!is_float($i / 3)) {
+//         echo "Fizz ";
+//     } elseif (!is_float($i / 5)) {
+//         echo "Buzz ";
+//     } elseif (!is_float($i / 3) && !is_float($i / 5)) {
+//         echo "FizzBuzz ";
+//     } else {
+//         echo "$i ";
+//     }
+
+// }
