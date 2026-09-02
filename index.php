@@ -240,6 +240,8 @@ class Carr
 
 
 
+# Loop Problem Solving
+
 // for ($i = 0; $i <= 10; $i ++) {
 //     echo "$i, ";
 // }
@@ -329,7 +331,7 @@ class Carr
 //     $mul = $i * $num;
 //     echo "$num * $i = $mul, ";
 // }
- 
+
 
 // for ($i = 1; $i <= 100; $i++) {
 //     if (!is_float($i / 3)) {
@@ -343,3 +345,31 @@ class Carr
 //     }
 
 // }
+
+
+
+# Index Array
+$cars = array("Volvo", "BMW", "Toyota");
+
+// print_r($cars);
+// var_dump(($cars));
+// $cars[0] = "Auto Rickshaw";
+// echo $cars[0];
+
+// foreach ($cars as $car) {
+//     echo "$car, ";
+// }
+
+
+
+# Associative Array
+$books = ["A"=>"Onuvutir Obhidhan", "B"=>"Growing Through Struggle", "C"=>"Birsty Bilas"];
+
+// print_r($books);
+
+function myFunc () {
+    global $books;
+    return $books;
+}
+
+print_r (myFunc());
