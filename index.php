@@ -366,10 +366,48 @@ $cars = array("Volvo", "BMW", "Toyota");
 $books = ["A"=>"Onuvutir Obhidhan", "B"=>"Growing Through Struggle", "C"=>"Birsty Bilas"];
 
 // print_r($books);
+// echo $books['A']; // Access array items of associative array
+
+// $books['C'] = "Dark Secret";
+// echo $books["C"]; // Dark Secret
 
 function myFunc () {
     global $books;
     return $books;
 }
 
-print_r (myFunc());
+// print_r (myFunc());
+
+
+# Loop through an Associative Array
+// foreach ($books as $key => $book) {
+//     echo "$key: $book, ";  // A: Onuvutir Obhidhan, B: Growing Through Struggle, C: Birsty Bilas,
+// }
+
+// # Add Array Items
+$fruits = ["Apple", "Banana", "Mango"];
+
+// Add Single item end of an array
+// $fruits[] = "Jackfruit";
+// $fruits[] = "Orange";
+
+// Add multiple items end of an array
+array_push($fruits, "Jackfruit", "Orange");
+array_push($fruits, "Lemon", "Coconut");
+
+
+// Add array items on the beginning of an array
+array_unshift($fruits, 'Pineapple', 'Grapes');
+
+// Remove and add specific array items
+array_splice($fruits, 7, 2);
+array_splice( $fruits, 5, 2, "Watermelon");
+
+
+// Remove last item of array
+array_pop($fruits);
+
+// Remove first item of array
+array_shift($fruits);
+
+print_r($fruits);
