@@ -363,7 +363,7 @@ $cars = array("Volvo", "BMW", "Toyota");
 
 
 # Associative Array
-$books = ["A"=>"Onuvutir Obhidhan", "B"=>"Growing Through Struggle", "C"=>"Birsty Bilas"];
+$books = ["A" => "Onuvutir Obhidhan", "B" => "Growing Through Struggle", "C" => "Birsty Bilas"];
 
 // print_r($books);
 // echo $books['A']; // Access array items of associative array
@@ -371,7 +371,8 @@ $books = ["A"=>"Onuvutir Obhidhan", "B"=>"Growing Through Struggle", "C"=>"Birst
 // $books['C'] = "Dark Secret";
 // echo $books["C"]; // Dark Secret
 
-function myFunc () {
+function myFunc()
+{
     global $books;
     return $books;
 }
@@ -401,7 +402,7 @@ array_unshift($fruits, 'Pineapple', 'Grapes');
 
 // Remove and add specific array items
 array_splice($fruits, 7, 2);
-array_splice( $fruits, 5, 2, "Watermelon");
+array_splice($fruits, 5, 2, "Watermelon");
 
 
 // Remove last item of array
@@ -410,4 +411,87 @@ array_pop($fruits);
 // Remove first item of array
 array_shift($fruits);
 
-print_r($fruits);
+// print_r($fruits);
+
+
+// PHP- Object Oriented Programming
+class Calculation
+{
+    public $a, $b, $c;
+
+    function sum()
+    {
+        $this->c = $this->a + $this->b;
+        return $this->c;
+    }
+}
+
+$c1 = new Calculation();
+
+$c1->a = 20;
+$c1->b = 20;
+
+// echo $c1->sum();
+
+
+
+class Employee
+{
+    private $name;
+    public $age;
+    public $role;
+    public $salary;
+
+    function __construct($name, $age, $role, $salary) {
+        $this->name = $name;
+        $this->age = $age;
+        $this->role = $role;
+        $this->salary = $salary;
+    }
+
+
+    public function info () {
+        return "$this->name, $this->age, $this->role, $this->salary";
+    }
+
+}
+
+
+
+// inheritance
+class Manager extends Employee {
+    public $ta_da = 1000;
+    
+    function __construct ($name, $age, $role, $salary, $ta_da) {
+        parent::__construct($name, $age, $role, $salary);
+        $this->ta_da = $ta_da;
+        $this->salary += $this->ta_da;
+    }
+}
+
+$e1 = new Employee("Nayem", 24, 'Software Developer', 50000);
+$e2 = new Manager("Rana", 17, 'Ship Builder', 100000, 3000);
+
+// echo $e1->info();
+// echo $e2->info();
+// echo $e2->name;
+
+
+class Phone {
+    public $model;
+    public $type;
+    public $price;
+
+    function __construct($model, $type, $price) {
+        $this->model = $model;
+        $this->type = $type;
+        $this->price = $price;
+    }
+
+
+    function __destruct() {
+        echo "$this->model, $this->type, $this->price";
+    }
+}
+
+$realme = new Phone("Realme C85 Pro", "Smartphone", 26000);
