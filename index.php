@@ -523,11 +523,29 @@ $parentCalc = new ParentCalc();
 
 
 // Final keyword
+// final class Fruit {
 
-final class Fruit {
+// }
 
+// class Strawberry extends Fruit {
+
+// }
+
+
+abstract class ParentClass {
+    public $name = 'Programming';
+
+    abstract protected function calculation($a, $b);
 }
 
-class Strawberry extends Fruit {
-    
+
+class ChildClass extends ParentClass{
+    public function calculation($a, $b) {
+        echo $a + $b;
+    }
 }
+
+
+$test = new ChildClass();
+
+$test->calculation(34,56);
