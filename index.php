@@ -494,4 +494,40 @@ class Phone {
     }
 }
 
-$realme = new Phone("Realme C85 Pro", "Smartphone", 26000);
+// $realme = new Phone("Realme C85 Pro", "Smartphone", 26000);
+
+
+
+// Method and Property Overriding
+class ParentCalc {
+    public $name = 'Mohsin';
+
+    function calc ($a, $b) {
+        echo $a+$b;
+    }
+}
+
+class ChildCalc extends  ParentCalc {
+    public $name = 'Nayem';
+
+    function calc ($a, $b) {
+        echo $a * $b;
+    }
+}
+
+
+$parentCalc = new ParentCalc();
+
+// echo $childCalc->name;
+// echo $parentCalc->calc(10, 20);
+
+
+// Final keyword
+
+final class Fruit {
+
+}
+
+class Strawberry extends Fruit {
+    
+}
