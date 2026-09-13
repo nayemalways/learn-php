@@ -548,4 +548,30 @@ class ChildClass extends ParentClass{
 
 $test = new ChildClass();
 
-$test->calculation(34,56);
+// $test->calculation(34,56);
+
+# OOP Interface
+
+interface A {
+    function sum($a, $b);
+}
+
+interface B {
+    function sub($a, $b);
+}
+
+class C implements A, B {
+    function sum($a, $b) {
+        echo $a + $b;
+    }
+
+    function sub($a, $b) {
+        echo $a - $b;
+    }
+}
+
+
+$c = new C();
+
+// echo $c->sum(4,5);
+echo $c->sub(4,5);
